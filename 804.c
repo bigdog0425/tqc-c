@@ -19,7 +19,7 @@ double average(double a[]){
     return(avg);
    
 }
-int main(int argc, char *argv[]) {
+int main() {
     int i;
     double a[MAX];
     for(i=0;i<MAX;i++){
