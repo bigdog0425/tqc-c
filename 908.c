@@ -7,22 +7,23 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#define MAX 100
-#define RANGE 1000
+#define MAX 100 //定義產生的數字個數
+#define RANGE 1000 //定義隨機數的最大範圍
+
 void main(){
     int a[MAX],i,j;
-    srand(time(NULL));
+    srand(time(NULL)); //隨機設定亂數種子
+    //取得亂數並檢查是否重複
     for(i=0;i<MAX;i++){
         a[i]=(rand()%RANGE)+1;
         for(j=i-1;j>=0;j--)
             if(a[i]==a[j])
                 i--;
     }
+    //印出隨機亂數，印出時每10個一列，資料靠右
     for(i=0;i<MAX;i++){
-    if(i%10)
-            printf("  %4d", a[i]);
-        else
-            printf("%4d", a[i]);
-        if(i%10==9) printf("\n");
+        printf("%4d", a[i]);
+		if(i%10==9) printf("\n"); //每10個數字換行
     }
 }
+
