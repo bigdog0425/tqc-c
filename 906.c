@@ -25,8 +25,9 @@ int main () {
         printf("請輸入第%d位同學的C語言分數:",i+1);
         scanf("%d",&s[i].score);
     }
+    printf("\n"); //換行
+    
     //顯示5位學生資料
-    printf("\n");
     for(i=0;i<MAX;i++){
         printf("%-20s%d",s[i].name,s[i].score);
         printf("\n");
