@@ -7,20 +7,25 @@
 //906 解答參考
 #include <stdio.h>
 #include <stdlib.h>
-#define MAX 5
+#define MAX 5 //定義學生資料筆數
+
+//建立學生的資料結構：
 struct student{
     char name[12];
     int score;
 };
-    struct student s[MAX];
+struct student s[MAX]; //設定s[MAX]為儲存學生結構的陣列，即建立五個學生的資料空間
+
 int main () {
     int i;
+    //輸入5位學生資料
     for(i=0;i<MAX;i++){
         printf("請輸入第%d位同學的姓名:",i+1);
         scanf("%s",&s[i].name);
         printf("請輸入第%d位同學的C語言分數:",i+1);
         scanf("%d",&s[i].score);
     }
+    //顯示5位學生資料
     printf("\n");
     for(i=0;i<MAX;i++){
         printf("%-20s%d",s[i].name,s[i].score);
