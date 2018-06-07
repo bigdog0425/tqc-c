@@ -1,12 +1,14 @@
-//�s�@�@�ӤE�E���k���å[�W�P�P���Ÿ��A�ХH�U�C���覡���g�C
-// a.�b�D�{�����A���@�Ӵ��ܰT���߰ݨϥΪ̭n�X���X�����k��(�̦h10)�A
-//   ����߰ݦb���k���W���W�B�U�n�L�X�h�֭ӬP�P(*)�A
-//   �N�o��Ӽƭȷ��@��ڰѼơA���O�ǵ��L�X���k����multiply()��ơA
-//   �H�ΦL�X�P�P�����printStar()��ơC
-// b.�C�L�X�i�}���E�E���k���A�W�U����J�P�P���ƥءC
-// c.�Y��J�����k���ƭȶW�L10�A�h���C�X���k���A�ȦL�X�P�P�C
+/*試題說明
+製作一個九九乘法表並加上星星的符號，請以下列的方式撰寫。
+ a.在主程式中，有一個提示訊息詢問使用者要幾乘幾的乘法表(最多10)，
+   接續詢問在乘法表上的上、下要印出多少個星星(*)，
+   將這兩個數值當作實際參數，分別傳給印出乘法表的multiply()函數，
+   以及印出星星的函數printStar()函數。
+ b.列印出展開的九九乘法表，上下為輸入星星的數目。
+ c.若輸入的乘法表數值超過10，則不列出乘法表，僅印出星星。
+*/
 
-//�ѵ��ܽd806
+//解答示範806
 #include <stdio.h>
 #include <stdlib.h>
 int i,j;
@@ -25,9 +27,9 @@ void multtiply(int a){
 }
 int main () {
     int a,b;
-    printf("�п�J�z�n�X���X�����k��(�̦h10):");
+    printf("請輸入您要幾乘幾的乘法表(最多10):");
     scanf("%d",&a);
-    printf("�п�J�z�n�h�֭ӬP�P:");
+    printf("請輸入您要多少個星星:");
     scanf("%d",&b);
     printStar(b);
     if(a<=10) multtiply(a);
