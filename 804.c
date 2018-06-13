@@ -9,27 +9,36 @@
 #include <stdio.h>
 #include <stdlib.h>
 #define MAX 6
-/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+//計算平均值函式(要計算數值的陣列)
 double average(double a[]){
     int i;
-    double sum=0,avg;
+    double sum=0,avg; //宣告加總變數sum，平均變數avg為浮點數，且加總變數sum初值為0
+    
+    //加總a[i]陣列
     for(i=0;i<MAX;i++)
         sum+=a[i];
-    avg=sum/MAX ;
-    return(avg);
-   
+    
+    avg=sum/MAX ; //計算平均
+    return(avg); //回傳平均
 }
+
+//主程式
 int main() {
     int i;
-    double a[MAX];
+    double a[MAX]; //宣告要計算的數字陣列
+    
+    //取得使用者輸入的10個數字
     for(i=0;i<MAX;i++){
         printf("請輸入第%d個浮點數:",i+1);
         scanf("%lf",&a[i]);
     }
+    
+    //顯示使用者輸入的10個數字
     printf("\n您輸入的陣列值如下\n");
     for(i=0;i<MAX;i++)
         printf("data[%d]:%.2lf\n",i,a[i]);
-    printf("\n平均:%.2lf",average(a));
+    printf("\n平均:%.2lf",average(a)); //顯示平均值
    
     return 0;
 }
