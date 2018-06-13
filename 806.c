@@ -12,28 +12,34 @@
 #include <stdio.h>
 #include <stdlib.h>
 int i,j;
+
+//列印一列星星並換行(共b個星星)
 void printStar(int b){
     for(i=0;i<b;i++)
         printf("*");
     printf("\n");
 }
-void multtiply(int a){
-    for(i=1;i<=a;i++){
-        for(j=1;j<=a;j++)
-            printf("%2d*%2d=%2d ",i,j,i*j);
-        printf("\n");
+
+//九九乘法表列印函式，印出1~a的99乘法表
+void multtiply(int a){ //引數：要列印的數字範圍
+    for(i=1;i<=a;i++){ //i 為外迴圈，控制每一列
+        for(j=1;j<=a;j++) //j闈內迴圈，控制每列的數字
+            printf("%2d*%2d=%2d ",i,j,i*j); //以□□*□□=□□的格式印出
+        printf("\n"); //換行
        
     }
 }
+
+//主程式
 int main () {
     int a,b;
     printf("請輸入您要幾乘幾的乘法表(最多10):");
-    scanf("%d",&a);
+    scanf("%d",&a); //乘法表的範圍為1~a
     printf("請輸入您要多少個星星:");
-    scanf("%d",&b);
-    printStar(b);
-    if(a<=10) multtiply(a);
-    printStar(b);  
+    scanf("%d",&b); //列印星星的個數
+    printStar(b); //印一列星星
+    if(a<=10) multtiply(a); //當輸入小於等於10則印出99乘法表
+    printStar(b); //印一列星星
    
     return 0;
 }
