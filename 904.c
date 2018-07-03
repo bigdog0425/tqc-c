@@ -14,7 +14,7 @@ TQC C Exam-904(成績檔案讀取)
 */
 /*
 檔案使用四步驟：
-1.設定檔案指標
+1.宣告檔案指標(只需宣告一次)
 2.開啟檔案為 w寫入/r讀取 模式
 3.從檔案將資料讀出/把資料寫入檔案內
 4.關閉檔案指標
@@ -24,7 +24,7 @@ TQC C Exam-904(成績檔案讀取)
 #include<stdlib.h>
 #include<stdio.h>
 int main(){
-    FILE *f; //設定檔案指標f
+    FILE *f; //宣告檔案指標f
     char name[20];
     int score;
     f=fopen("score.dat", "w"); //開啟檔案為寫入模式
@@ -44,12 +44,15 @@ int main(){
 #include<stdlib.h>
 #include<stdio.h>
 int main(){
-    FILE *f;//設定檔案指標f
+    FILE *f;//宣告檔案指標f
     char name[20];
     int score;
     f=fopen("score.dat", "r"); //開啟檔案為讀取模式
+    
+    //依序從檔案讀出資料並顯示在螢幕
     while(fscanf(f,"%s %d",name,&score)!=EOF) //從檔案將name，score資料讀出
-    printf("%s的C語言分數是%d\n",name,score);
-    fclose(f); //關閉檔案(指標)
+    printf("%s的C語言分數是%d\n",name,score); //顯示姓名，分數
+    
+    fclose(f); //關閉檔案
  return 0;
 }
