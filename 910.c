@@ -15,7 +15,7 @@
 struct student{
     char name[20];
     int score;
-    struct student* next;
+    struct student *next;
 } *a,*b,*c,*current; //建立a b c current四個學生結構指標
  
 int main () {
