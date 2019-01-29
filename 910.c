@@ -22,7 +22,7 @@ int main () {
 //    struct student *a,*b,*c,*current;
     //建立a學生結構指標
     a=malloc(sizeof(struct student)); //取得a同學記憶體空間
-    printf("請輸入第一位學生的姓名: ");
+    printf("請輸入第一位學生姓名: ");
     scanf("%s",&a->name);
     printf("分數: ");
     scanf("%d",&a->score);
@@ -30,7 +30,7 @@ int main () {
  
     //建立b學生結構指標
     b=malloc(sizeof(struct student));
-    printf("請輸入第二位學生的姓名: ");
+    printf("請輸入第二位學生姓名: ");
     scanf("%s",&b->name);
     printf("分數: ");
     scanf("%d",&b->score);
@@ -39,7 +39,7 @@ int main () {
     
     //建立c學生結構指標
     c=malloc(sizeof(struct student));
-    printf("請輸入第三位學生的姓名: ");
+    printf("請輸入第三位學生姓名: ");
     scanf("%s",&c->name);
     printf("分數: ");
     scanf("%d",&c->score);
