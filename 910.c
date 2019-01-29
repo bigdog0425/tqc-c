@@ -47,7 +47,7 @@ int main () {
     c->next=NULL; //將c結尾(下一位同學)設定為無
  
     current=a; //設定當前指標為a
-    printf("\n輸出. . .\n");
+    printf("\n輸出...\n");
  
     //輸出三位學生資料
     while(current!=NULL){
