@@ -13,7 +13,7 @@ int main ()
  
     output=atoi(string);
      printf("%s轉換後的整數為%3.0f\n", string, output);
-    system("PAUSE");
+//    system("PAUSE");
      return 0;
 }
 //=============================================
@@ -35,7 +35,7 @@ int main ()
     triple_num = TRIPLE(5);
     printf("5的三次方為%d\n", triple_num);
  
-    system("PAUSE");
+//    system("PAUSE");
     return 0;
 }
  
@@ -54,7 +54,7 @@ int main ()
    
     result=exp(5)*(sqrt((pow(x, y)+log(100))))/pow(x, 2)*pow(y, 3);
     printf("result=%lf\n", result);
-    system("PAUSE");
+//    system("PAUSE");
      return 0;
 }
 //=============================================
@@ -76,7 +76,7 @@ int main()
         }
         printf("\n");
     }
-    system("PAUSE");
+//    system("PAUSE");
     return 0;
 }
  
@@ -111,6 +111,6 @@ int main ()
     scanf("%d",&dT.i);  
     /* 印出dT變數中的d和i */
     printf("%d ",dT.i);
-    system("PAUSE");
+//    system("PAUSE");
     return 0;
 }
