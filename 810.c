@@ -40,7 +40,7 @@ int main (){
         printf("\n");
             }
   
-    //分行列印出矩陣二
+    //分行列印出矩陣三
     printf("\n矩陣三\n");
     for(i=0;i<3;i++){
         for(j=0;j<3;j++)
