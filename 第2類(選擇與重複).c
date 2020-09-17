@@ -1,4 +1,11 @@
-//202題目
+/*202題目
+1.輸入一個分數，判斷此分數若大於60分，則加10分，否則加5分，最後列印出調整後的分數。
+2.題目已提供程式碼片段，執行結果如參考畫面，程式碼有語法、邏輯或其他項目上的錯誤，請全數修正。
+
+請輸入分數：70
+調整後的分數為80
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
  
@@ -37,7 +44,8 @@ int main()
 }
  
 =================================================
-//TQC C Exam-204
+//TQC C Exam-204：
+ //利用switch...case判斷您的身分，輸入U代表大學生，M代表研究生、P代表博士生。
 #include <stdio.h>
 #include <stdlib.h>
  
@@ -94,7 +102,113 @@ int main ()
 }
  
 =================================================
+//TQC C Exam-206：
+ //使用while迴圈，計算1加到100的總和。
+#include <stdio.h>
+#include <stdlib.h>
+ 
+int main ()
+{
+    int i=1, total=0;
+   while (i <= 100)
+{
+        i++;
+        total += i;
+   }
+   printf("1加到100的總和:%d\n", total);
+    system("PAUSE");
+   return 0;
+}
+ 
+ 
+//206參考解答
+#include <stdio.h>
+#include <stdlib.h>
+ 
+int main ()
+{
+    int i=1, total=0;
+    while (i <= 100){
+        total += i;
+        i++;
+    }
+    printf("1加到100的總和:%d\n", total);
+    system("PAUSE");
+    return 0;
+}
+ 
+=================================================
+//TQC C Exam-208
+ //使用for迴圈，計算1到100的偶數和。
+#include <stdio.h>
+#include <stdlib.h>
+ 
+int main ()
+{
+    int i, total;
+    for (i=1; i<100; i++);
+        total += i;
+   
+    printf("1到100的偶數和: %d\n", total);
+    system("PAUSE");
+     return 0;
+}
+ 
+//208參考解答
+#include <stdio.h>
+#include <stdlib.h>
+ 
+int main ()
+{
+    int i, total=0;
+    for (i=2; i<=100; i+=2)
+        total += i;
+ 
+    printf("1到100的偶數和: %d\n", total);
+    system("PAUSE");
+    return 0;
+}
+ 
+=================================================
+//TQC C Exam-210：
+ //使用do....while迴圈，計算1到100的偶數和。
+#include <stdio.h>
+#include <stdlib.h>
+ 
+int main ()
+{
+    int i=1, total;
+    do {
+    i+=2;
+    total += i;
+    } while (i<100);
+   
+     printf("1到100的偶數和: %d\n", total);
+    system("PAUSE");
+     return 0;
+}
+ 
+//210參考解答
+#include <stdio.h>
+#include <stdlib.h>
+ 
+int main ()
+{
+    int i=2, total=0;
+    do {
+    total += i;
+    i+=2;
+    } while (i<=100);
+   
+    printf("1到100的偶數和: %d\n", total);
+    system("PAUSE");
+    return 0;
+}
+
+
+=================================================
 //TQC C Exam-205
+ //利用switch...case和for迴圈，判斷每一候選人的得票數及廢票，假設有十個人投票。
 #include <stdio.h>
 #include <stdlib.h>
  
@@ -179,42 +293,7 @@ int main ()
     system("PAUSE");
     return 0;
 }
- 
-=================================================
-//TQC C Exam-206
-#include <stdio.h>
-#include <stdlib.h>
- 
-int main ()
-{
-    int i=1, total=0;
-   while (i <= 100)
-{
-        i++;
-        total += i;
-   }
-   printf("1加到100的總和:%d\n", total);
-    system("PAUSE");
-   return 0;
-}
- 
- 
-//206參考解答
-#include <stdio.h>
-#include <stdlib.h>
- 
-int main ()
-{
-    int i=1, total=0;
-    while (i <= 100){
-        total += i;
-        i++;
-    }
-    printf("1加到100的總和:%d\n", total);
-    system("PAUSE");
-    return 0;
-}
- 
+
 =================================================
 //TQC C Exam-207
 #include <stdio.h>
@@ -253,38 +332,7 @@ int main ()
     system("PAUSE");
     return 0;
 }
- 
-=================================================
-//TQC C Exam-208
-#include <stdio.h>
-#include <stdlib.h>
- 
-int main ()
-{
-    int i, total;
-    for (i=1; i<100; i++);
-        total += i;
-   
-    printf("1到100的偶數和: %d\n", total);
-    system("PAUSE");
-     return 0;
-}
- 
-//208參考解答
-#include <stdio.h>
-#include <stdlib.h>
- 
-int main ()
-{
-    int i, total=0;
-    for (i=2; i<=100; i+=2)
-        total += i;
- 
-    printf("1到100的偶數和: %d\n", total);
-    system("PAUSE");
-    return 0;
-}
- 
+  
 =================================================
 //TQC C Exam-209
 #include <stdio.h>
@@ -320,37 +368,3 @@ int main ()
      return 0;
 }
  
-=================================================
-//TQC C Exam-210
-#include <stdio.h>
-#include <stdlib.h>
- 
-int main ()
-{
-    int i=1, total;
-    do {
-    i+=2;
-    total += i;
-    } while (i<100);
-   
-     printf("1到100的偶數和: %d\n", total);
-    system("PAUSE");
-     return 0;
-}
- 
-//210參考解答
-#include <stdio.h>
-#include <stdlib.h>
- 
-int main ()
-{
-    int i=2, total=0;
-    do {
-    total += i;
-    i+=2;
-    } while (i<=100);
-   
-    printf("1到100的偶數和: %d\n", total);
-    system("PAUSE");
-    return 0;
-}
