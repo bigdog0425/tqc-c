@@ -1,8 +1,8 @@
 //題目302
-//程式輸入一個分數後，利用adjust函數，加以調整學生的分數。若分數大於等於60分，加5分，否則一律加10分。
+  //程式輸入一個分數後，利用adjust函數，加以調整學生的分數。若分數大於等於60分，加5分，否則一律加10分。
 #include <stdio.h>
 #include <stdlib.h>
-int adjust(int);
+int adjust(int); //宣告一個副程式adjust(參數為整數)，回傳結果為整數
 int main ()
 {
     int score, final;
@@ -82,7 +82,7 @@ void callFun()
 #include <stdio.h>
 #include <stdlib.h>
  
-void callFun();
+void callFun();//宣告一副程式callfun，完成後無傳回值(void)
 int main()
 {
     int i;
@@ -104,7 +104,175 @@ void callFun()
     printf("ai=%d, si=%d\n", ai, si);
 }
  
+
+/******************************************************/
+//TQC C Exam-306
+//將6個整數元素以設定的方式置於一個arr陣列，將其加總後予以印出。
+#include <stdio.h>
+#include <stdlib.h>
  
+int main()
+{
+    int arr[5]={10, 20, 30, 40, 50, 60}; 
+    int i, total=0;
+    for (i=1; i<6; i++) {
+          total += arr[i];
+    }
+   
+    printf("總和為%f\n", total);
+    system("PAUSE");
+    return 0;
+}
+ 
+//解答示範306
+#include <stdio.h>
+#include <stdlib.h>
+ 
+int main()
+{
+    int arr[6]={10,20,30,40,50,60}; //宣告一整數陣列，並給予初值
+    int i, total=0;
+    for (i=0; i<6; i++) {
+          total=total+arr[i];
+    }
+   
+    printf("總和為%d\n", total);
+    system("PAUSE");
+    return 0;
+}
+
+/******************************************************/
+//TQC C Exam-308
+  //以輸入的方式給予陣列的初始值，之後呼叫sum函數，加總陣列的每一個元素。
+#include <stdio.h>
+#include <stdlib.h>
+ 
+double sum(double a[], int n);
+int main ()
+{
+    double arr[5];
+    int i, total;
+   
+    for(i=0; i<5; i++) {
+          printf("請輸入陣列arr[%d]元素值: ", i);
+          scanf("%lf", arr[i]);
+    }
+   
+    for(i=0; i<5; i++)
+          printf("arr[%d]=%.2f\n", i, arr[i]);
+   
+    total=sum(arr);
+    printf("此陣列的總和為%.2f\n", total);
+    system("PAUSE");
+    return 0;
+}
+ 
+double sum(int a[], int n)
+{
+    int k;
+    double tot;
+    for(k=1; k<n; k++)
+        tot += a[k];
+    return tot;
+}
+ 
+//解答示範308
+#include <stdio.h>
+#include <stdlib.h>
+ 
+double sum(double a[], int n); //宣告sum副程式(參數為雙精浮點數a[],整數n)，傳回值為雙精浮點數
+int main ()
+{
+    double arr[5], total;
+    int i;
+   
+    for(i=0; i<5; i++) {
+        printf("請輸入陣列arr[%d]元素值: ", i);
+        scanf("%lf", &arr[i]);
+    }
+   
+    for(i=0; i<5; i++)
+          printf("arr[%d]=%.2f\n", i, arr[i]);
+   
+    total=sum(arr,i);
+    printf("此陣列的總和為%.2f\n", total);
+    system("PAUSE");
+    return 0;
+}
+ 
+double sum(double a[], int n)
+{
+    int k;
+    double tot;
+    for(k=0; k<n; k++)
+        tot += a[k];
+    return tot;
+}
+ 
+/******************************************************/
+//TQC C Exam-310
+  //程式欲輸出陣列每一個元素的值，及其在記憶體的位址。
+#include <stdio.h>
+#include <stdlib.h>
+ 
+int main ()
+{
+    int arr[5]={100, 200, 300, 400, 500};
+    int i;
+   
+    printf("\n陣列元素的值如下:\n");
+    for (i=1; i<5; i++)
+    {
+         printf("arr[%d]=%d\n", i, arr[i]);
+    }
+   
+    printf("\n陣列元素的位址如下:\n");
+    for (i=1; i<5; i++)
+    {
+         printf("&arr[%d]=%p\n", i, &arr[i]);
+    }
+   
+    printf("\n陣列元素的位址如下:\n");
+    for (i=1; i<5; i++)
+    {
+         printf("&arr[%d]=%p\n", i, &arr+i);
+    }
+   
+    system("PAUSE");
+    return 0;
+}
+ 
+//解答示範310
+#include <stdio.h>
+#include <stdlib.h>
+ 
+int main ()
+{
+    int arr[5]={100, 200, 300, 400, 500};
+    int i;
+   
+    printf("\n陣列元素的值如下:\n");
+    for (i=0; i<5; i++)
+    {
+         printf("arr[%d]=%d\n", i, arr[i]); //顯示陣列內的內容(值)
+    }
+   
+    printf("\n陣列元素的位址如下:\n");
+    for (i=0; i<5; i++)
+    {
+         printf("&arr[%d]=%p\n", i, &arr[i]);//&arr[i]：以陣列編號的方式取得位址
+    }
+   
+    printf("\n陣列元素的位址如下:\n");
+    for (i=0; i<5; i++)
+    {
+         printf("&arr[%d]=%p\n", i, &arr+i);//&arr+i：以增加變數數量的方式取得位址
+    }
+   
+    system("PAUSE");
+    return 0;
+}
+
 /******************************************************/
 //TQC C Exam-305
 //CPD03-1.c的程式如下：
@@ -161,41 +329,6 @@ int callTotal(int x,int y)
 }
  
 /******************************************************/
-//TQC C Exam-306
-//將6個整數元素以設定的方式置於一個arr陣列，將其加總後予以印出。
-#include <stdio.h>
-#include <stdlib.h>
- 
-int main()
-{
-    int arr[5]={10, 20, 30, 40, 50, 60};
-    int i, total=0;
-    for (i=1; i<6; i++) {
-          total += arr[i];
-    }
-   
-    printf("總和為%f\n", total);
-    system("PAUSE");
-    return 0;
-}
- 
-//解答示範306
-#include <stdio.h>
-#include <stdlib.h>
- 
-int main()
-{
-    int arr[6]={10,20,30,40,50,60};
-    int i, total=0;
-    for (i=0; i<6; i++) {
-          total=total+arr[i];
-    }
-   
-    printf("總和為%d\n", total);
-    system("PAUSE");
-    return 0;
-}
-/******************************************************/
 //TQC C Exam-307
 #include <stdio.h>
 #include <stdlib.h>
@@ -236,74 +369,6 @@ int main()
     printf("總和為%.2f\n", total);
     system("PAUSE");
     return 0;
-}
- 
-/******************************************************/
-//TQC C Exam-308
-  //以輸入的方式給予陣列的初始值，之後呼叫sum函數，加總陣列的每一個元素。
-#include <stdio.h>
-#include <stdlib.h>
- 
-double sum(double a[], int n);
-int main ()
-{
-    double arr[5];
-    int i, total;
-   
-    for(i=0; i<5; i++) {
-          printf("請輸入陣列arr[%d]元素值: ", i);
-          scanf("%lf", arr[i]);
-    }
-   
-    for(i=0; i<5; i++)
-          printf("arr[%d]=%.2f\n", i, arr[i]);
-   
-    total=sum(arr);
-    printf("此陣列的總和為%.2f\n", total);
-    system("PAUSE");
-    return 0;
-}
- 
-double sum(int a[], int n)
-{
-    int k;
-    double tot;
-    for(k=1; k<n; k++)
-        tot += a[k];
-    return tot;
-}
- 
-//解答示範308
-#include <stdio.h>
-#include <stdlib.h>
- 
-double sum(double a[], int n);
-int main ()
-{
-    double arr[5], total;
-    int i;
-   
-    for(i=0; i<5; i++) {
-        printf("請輸入陣列arr[%d]元素值: ", i);
-        scanf("%lf", &arr[i]);
-    }
-   
-    for(i=0; i<5; i++)
-          printf("arr[%d]=%.2f\n", i, arr[i]);
-   
-    total=sum(arr,i);
-    printf("此陣列的總和為%.2f\n", total);
-    system("PAUSE");
-    return 0;
-}
- 
-double sum(double a[], int n)
-{
-    int k;
-    double tot;
-    for(k=0; k<n; k++)
-        tot += a[k];
-    return tot;
 }
  
 /******************************************************/
@@ -377,66 +442,3 @@ int max(int a[], int n)
     return M;
 }
  
-/******************************************************/
-//TQC C Exam-310
-  //程式欲輸出陣列每一個元素的值，及其在記憶體的位址。
-#include <stdio.h>
-#include <stdlib.h>
- 
-int main ()
-{
-    int arr[5]={100, 200, 300, 400, 500};
-    int i;
-   
-    printf("\n陣列元素的值如下:\n");
-    for (i=1; i<5; i++)
-    {
-         printf("arr[%d]=%d\n", i, arr[i]);
-    }
-   
-    printf("\n陣列元素的位址如下:\n");
-    for (i=1; i<5; i++)
-    {
-         printf("&arr[%d]=%p\n", i, &arr[i]);
-    }
-   
-    printf("\n陣列元素的位址如下:\n");
-    for (i=1; i<5; i++)
-    {
-         printf("&arr[%d]=%p\n", i, &arr+i);
-    }
-   
-    system("PAUSE");
-    return 0;
-}
- 
-//解答示範310
-#include <stdio.h>
-#include <stdlib.h>
- 
-int main ()
-{
-    int arr[5]={100, 200, 300, 400, 500};
-    int i;
-   
-    printf("\n陣列元素的值如下:\n");
-    for (i=0; i<5; i++)
-    {
-         printf("arr[%d]=%d\n", i, arr[i]);
-    }
-   
-    printf("\n陣列元素的位址如下:\n");
-    for (i=0; i<5; i++)
-    {
-         printf("&arr[%d]=%p\n", i, &arr[i]);
-    }
-   
-    printf("\n陣列元素的位址如下:\n");
-    for (i=0; i<5; i++)
-    {
-         printf("&arr[%d]=%p\n", i, &arr+i);
-    }
-   
-    system("PAUSE");
-    return 0;
-}
