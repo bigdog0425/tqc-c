@@ -1,4 +1,5 @@
 //題目302
+//程式輸入一個分數後，利用adjust函數，加以調整學生的分數。若分數大於等於60分，加5分，否則一律加10分。
 #include <stdio.h>
 #include <stdlib.h>
 int adjust(int);
@@ -53,6 +54,7 @@ int adjust(int score)
  
 ===================================
 //TQC C Exam-304
+  //本題為測驗儲存類別auto與static變數之差異。
 #include <stdio.h>
 #include <stdlib.h>
  
@@ -160,6 +162,7 @@ int callTotal(int x,int y)
  
 /******************************************************/
 //TQC C Exam-306
+//將6個整數元素以設定的方式置於一個arr陣列，將其加總後予以印出。
 #include <stdio.h>
 #include <stdlib.h>
  
@@ -237,6 +240,7 @@ int main()
  
 /******************************************************/
 //TQC C Exam-308
+  //以輸入的方式給予陣列的初始值，之後呼叫sum函數，加總陣列的每一個元素。
 #include <stdio.h>
 #include <stdlib.h>
  
@@ -375,6 +379,7 @@ int max(int a[], int n)
  
 /******************************************************/
 //TQC C Exam-310
+  //程式欲輸出陣列每一個元素的值，及其在記憶體的位址。
 #include <stdio.h>
 #include <stdlib.h>
  
