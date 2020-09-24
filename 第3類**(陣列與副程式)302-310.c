@@ -195,7 +195,7 @@ int main ()
           printf("arr[%d]=%.2f\n", i, arr[i]);
    
     total=sum(arr,i);
-    printf("此陣列的總和為%.2f\n", total);
+    printf("此陣列的總和為%.2lf\n", total);
     system("PAUSE");
     return 0;
 }
