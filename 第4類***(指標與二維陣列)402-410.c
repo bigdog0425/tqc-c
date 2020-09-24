@@ -48,7 +48,7 @@ int main ()
     printf("\n第三種表示方法\n");
     for (i=0; i<2; i++) {
         for (j=0; j<3; j++) {
-//          printf("arr[%d][%d]=%d\n", i, j, *(arr+i)+j);//待解答
+            printf("arr[%d][%d]=%d\n", i, j, *(*(arr+i)+j));
         }
     }
    
