@@ -17,7 +17,48 @@ int main ()
 }
  
 /*-------------------------------------------------------------*/
-//TQC C Exam-404解答示範
+//TQC C Exam-404
+#include <stdio.h>
+#include <stdlib.h>
+
+int main () 
+{
+	int arr[2][3];
+	int i, j;
+	for (i=0; i<2; i++) {
+		for (j=0; j<3; j++) {
+		    printf("請輸入陣列arr[%d][%d]元素值:", i, j);
+		    scanf("%d", &arr[i][j]);
+		}
+	}
+	
+	for (i=0; i<2; i++) {
+		for (j=0; j<3; j++) {
+		      printf("arr[%d][%d]=%d\n", i, j, arr[i][j]);
+		}
+ 	}
+	
+	//另一種表示方法
+	printf("\n另一種表示方法\n");
+	for (i=0; i<2; i++) {
+		for (j=0; j<3; j++) {
+			printf("arr[%d][%d]=%d\n", i, j, arr[i]+j);
+		}
+	}
+		
+	//第三種表示方法
+	printf("\n第三種表示方法\n");
+	for (i=0; i<2; i++) {
+		for (j=0; j<3; j++) {
+			printf("arr[%d][%d]=%d\n", i, j, *(arr+i)+j);
+		}
+	}
+	
+	system("PAUSE");
+	return 0;
+}
+
+//TQC C Exam-404解答示範=================================
 #include <stdio.h>
 #include <stdlib.h>
  
