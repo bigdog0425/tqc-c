@@ -116,7 +116,35 @@ int main ()
 }
  
 /*-------------------------------------------------------------*/
-//TQC C Exam-406參考解答
+//TQC C Exam-406
+#include <stdio.h>
+#include <stdlib.h>
+
+void change(int *, int *);
+
+int main ( ) 
+{
+	int i=100, j=200;
+	printf("交換前i與j的值: \n");
+	printf("i=%d, j=%d\n", i, j);
+	
+	change(i, j);
+	printf("交換後i與j的值: \n");
+	printf("i=%d, j=%d\n", i, j);
+	
+	system("PAUSE");
+	return 0;
+}
+
+void change(int *x, int *y)
+{
+     	int temp;
+     	temp=x;
+     	x=y;
+     	y=temp;
+}
+
+//TQC C Exam-406參考解答===============
 #include <stdio.h>
 #include <stdlib.h>
  
@@ -145,7 +173,46 @@ void change(int *x, int *y)
 }
  
 /*-------------------------------------------------------------*/
-//TQC C Exam-408 參考解答
+//TQC C Exam-408
+#include <stdio.h>
+#include <stdlib.h>
+
+int Max(int *, int n);
+
+int main ( ) 
+{
+     	int arr[5];
+	int maximum, i;
+	
+ 	for (i=0; i<5; i++) {
+		  printf("請輸入arr[%d]元素值: ", i);
+		  scanf("%d", &arr[i]);
+	}
+	
+	printf("\n陣列的元素值分別如下:\n");
+	for (i=0; i<5; i++) {
+		  printf("arr[%d]=%d\n", i, arr[i]);
+	}
+ 	
+	maximum=Max(arr, 5);
+ 	printf("\n此陣列的最大值為%d\n", maximum);
+	
+	system("PAUSE");
+	return 0;
+}
+
+int Max(int *p, int n)
+{
+    	int i, maxi_value=p;
+    	for (i=0; i<=n; i++) {
+		 if (maxi_value > *(p+i)) {
+			maxi_value=*(p+i);
+		 }
+ 	}
+	return maxi_value;
+}
+
+//TQC C Exam-408 參考解答===================
 #include <stdio.h>
 #include <stdlib.h>
  
